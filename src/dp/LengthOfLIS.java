@@ -19,4 +19,8 @@ public class LengthOfLIS {
         }
         return maxLen;
     }
+
+    public static void main(String[] args) {
+        System.out.println(new LengthOfLIS().lengthOfLIS(new int[]{83, 5, 8, 18, 9, 78, 123, 42, 323, 2143, 325122, 802323}));
+    }
 }
