@@ -11,7 +11,6 @@ public class MaxProfitV3 {
             for (int j = maxTradeNum; j >= 1; j--) {
                 if (i == 0) {
                     dp[i][j][0] = 0;
-                    // Ω‚ Õ£∫
                     //   dp[i][0]
                     // = max(dp[-1][0], dp[-1][1] + prices[i])
                     // = max(0, -infinity + prices[i]) = 0
