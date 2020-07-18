@@ -25,5 +25,6 @@ public class Iterables {
             Integer number = (Integer) iterator.next();//指向下一个元素
             System.out.println(number);
         }
+        System.out.println(Iterables.class.getClassLoader().getParent());
     }
 }
