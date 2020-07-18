@@ -1,10 +1,6 @@
 package math;
 
-import java.util.Stack;
-
 public class CountAndSay {
-    Stack<Character> stack = new Stack<Character>();
-
     public String countAndSay(int n) {
         StringBuilder sb = new StringBuilder();
         int left = 0;
@@ -13,16 +9,14 @@ public class CountAndSay {
             return "1";
         }
         String str = countAndSay(n - 1);
-        for (cur = 1; cur < sb.length(); ) {
-//            如果一样的话
-            if (str.charAt(left) != str.charAt(1)) {
-                int count = cur - 1;
+        for (cur = 1; cur < str.length(); cur++) {
+            if (str.charAt(left) != str.charAt(cur)) {// 如果碰到当前字符与前面紧邻的字符不等则更新此次结果
+                int count = cur - left;
                 sb.append(count).append(str.charAt(left));
                 left = cur;
             }
-            cur++;
         }
-        if (left != cur) {
+        if (left != cur) {// 防止最后一段数相等，如果不等说明p1到cur-1这段字符串是相等的
             sb.append(cur - left).append(str.charAt(left));
         }
         return sb.toString();
