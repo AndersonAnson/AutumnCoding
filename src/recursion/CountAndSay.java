@@ -1,4 +1,4 @@
-package math;
+package recursion;
 
 public class CountAndSay {
     public String countAndSay(int n) {
