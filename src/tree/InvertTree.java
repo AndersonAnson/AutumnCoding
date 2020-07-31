@@ -8,8 +8,8 @@ public class InvertTree {
         if (root == null) {
             return null;
         }
-        TreeNode right = invertTree(root.left);
-        TreeNode left = invertTree(root.right);
+        TreeNode left = invertTree(root.left);
+        TreeNode right = invertTree(root.right);
         root.right = left;
         root.left = right;
         return root;
