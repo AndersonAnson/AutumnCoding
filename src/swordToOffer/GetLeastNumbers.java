@@ -16,6 +16,7 @@ public class GetLeastNumbers {
 //          return o2 - o1;//构建大顶堆
 //       }
 //    });
+        //构建大顶堆
         PriorityQueue<Integer> q = new PriorityQueue<>(k, (x, y) -> (y - x));
         for (int i = 0; i < input.length; i++) {
             q.add(input[i]);
