@@ -1,0 +1,9 @@
+DELETE FROM Person
+WHERE Id NOT IN (
+		SELECT middleTable.id
+		FROM (
+			SELECT MIN(id) AS id
+			FROM Person
+			GROUP BY Email
+		) middleTable
+	)
