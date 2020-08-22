@@ -1,4 +1,4 @@
-package test;
+package test.didi;
 
 import java.util.LinkedList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package test;
+package test.ali;
 
 import java.util.LinkedList;
 import java.util.Scanner;
