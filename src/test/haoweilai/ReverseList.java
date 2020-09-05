@@ -17,12 +17,5 @@ public class ReverseList {
             cur = cur.next;
         }
         return pre;
-        StringBuilder s = new StringBuilder("");
-        while (pre != null) {
-            s.append(pre.val + ",");
-            pre = pre.next;
-        }
-        s.deleteCharAt(s.length() - 1);
-        System.out.println(s.toString());
     }
 }
