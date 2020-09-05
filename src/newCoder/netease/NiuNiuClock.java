@@ -1,4 +1,4 @@
-package newCoder;
+package newCoder.netease;
 
 import java.util.Arrays;
 import java.util.Scanner;
