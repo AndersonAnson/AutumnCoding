@@ -1,4 +1,4 @@
-package main;
+package basisGrammar;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +11,6 @@ public class Main {
         byte c = 3;
         int d = 'c';
         double e = 0.2;
-
         System.out.println(c);
     }
 
