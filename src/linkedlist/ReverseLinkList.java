@@ -1,13 +1,28 @@
 package linkedlist;
 
 public class ReverseLinkList {
-    ListNode reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode pre = null;
+        ListNode nextNode = null;
+        while (head != null) {
+            nextNode = head.next;
+            head.next = pre;
+            pre = head;
+            head = nextNode;
+        }
+        return pre;
+    }
+
+    public ListNode reverseListV2(ListNode head) {
         //递归终止条件是当前为空，或者下一个节点为空
-        if(head==null || head.next==null) {
+        if (head == null || head.next == null) {
             return head;
         }
         //这里的cur就是最后一个节点
-        ListNode cur = reverseList(head.next);
+        ListNode cur = reverseListV2(head.next);
         //这里请配合动画演示理解
         //如果链表是 1->2->3->4->5，那么此时的cur就是5
         //而head是4，head的下一个是5，下下一个是空
@@ -19,7 +34,7 @@ public class ReverseLinkList {
         return cur;
     }
 
-    public ListNode reverseListV2(ListNode head) {
+    public ListNode reverseListV3(ListNode head) {
         if (head == null) return null;
         ListNode dummy = new ListNode(-1);
         while (head != null) {
