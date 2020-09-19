@@ -1,2 +1,4 @@
-package task;public class AutoVisitURL {
+package task;
+
+public class AutoVisitURL {
 }

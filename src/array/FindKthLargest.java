@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class FindKthLargest {
     Random random = new Random();
-
     public int findKthLargest(int[] nums, int k) {
         return quickSelect(nums, 0, nums.length - 1, nums.length - k);
     }
